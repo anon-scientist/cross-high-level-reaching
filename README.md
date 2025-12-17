@@ -59,7 +59,12 @@ apptainer exec my_container.sif path_to_benchmark_repo/main.bash
 6. Look at the simulation results located in a new results folder inside the cloned repository
 
 ## Files
-
+* `robot_only.bash`/`robot_only.py` Starts a demo demonstrating the standalone use of the robot, i.e., without environment or RL framework.
+* `env_only.bash`/`env_only.py` Starts a demo demonstrating the standalone use of the environment, i.e., without the RL framework.
+* `inspect_topics.bash` Starts the Gazebo simulation and displays the subscribable topics and services.
+* `main.bash` Starts the complete RL experiment. Invocation as "source main.bash $(pwd)/.." where the argument is the base path of the other repositories.
+* `src/cross_high_level_reaching/Experiment.py` The file that launches an experiment using our own RL framework.
+* `src/cross_high_level_reaching/Environment.py` The file that contains the environment that the RL framework operates.
 
 ## Command Line Parameters
 Here are some of the relevant hyperparameters the RL-Framework accepts. For more information look at the `main.bash` or the individual relevant python files.
@@ -89,6 +94,6 @@ Here are some of the relevant hyperparameters the RL-Framework accepts. For more
 
 ## Related Repositories
 * [**CRoSS** - Entry Repository](https://github.com/anon-scientist/continual-robotic-simulation-suite/)
-* [ICRL - RL-Framework Repository](https://github.com/anon-scientist/icrl/)
-* [CL_Experiments - Utils Repository](https://github.com/anon-scientist/cl_experiments/)
+* [ICRL - RL-Framework Repository](https://github.com/anon-scientist/cross-icrl/)
+* [CL_Experiments - Utils Repository](https://github.com/anon-scientist/cl_experiment/)
 * [HLR with Kinematic Simulation](https://github.com/anon-scientist/cross-kinematic-high-level-reaching)

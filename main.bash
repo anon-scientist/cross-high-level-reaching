@@ -72,6 +72,8 @@ PROJECT_DIR="cross-high-level-reaching"
 echo ARGS $#
 if [ "$#" == "1" ] ; then
 SRC_PATH=${1} ;
+else
+SRC_PATH="./../" ;
 fi
 ROOT_PATH="${SRC_PATH}/${PROJECT_DIR}"
 if [ -d "$ROOT_PATH" ]; then

@@ -20,7 +20,7 @@ class RobotAction():
         self.label = label
         self.amount = amount
 
-class RobotArmWrapper():
+class RobotArmWrapper(GenericEnvironment):
     def __init__(self,step_duration_nsec=100 * 1000 * 1000,**kwargs) -> None:
         self.config = self.parse_args(**kwargs)
         self.task_list = self.config.task_list
